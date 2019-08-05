@@ -15,61 +15,67 @@ import Load12 from '@/components/loading12'
 
 import './index.scss'
 
+const github = 'https://github.com/tenggouwa/Loading/tree/master/src/components/loading'
 const loadComponents = [{
     index: 0,
     render: (<Load1 />),
-    backGround: '#ffaeae'
+    backGround: '#ffaeae',
 }, {
     index: 1,
     render: (<Load2 />),
-    backGround: '#ffd182'
+    backGround: '#ffd182',
 }, {
     index: 2,
     render: (<Load3 />),
-    backGround: '#ffff9f'
+    backGround: '#ffff9f',
 }, {
     index: 3,
     render: (<Load4 />),
-    backGround: '#9fff9f'
+    backGround: '#9fff9f',
 }, {
     index: 4,
     render: (<Load5 />),
-    backGround: '#e5f2ff'
+    backGround: '#e5f2ff',
 }, {
     index: 5,
     render: (<Load6 />),
-    backGround: '#80afff'
+    backGround: '#80afff',
 }, {
     index: 6,
     render: (<Load7 />),
-    backGround: '#fb92ff'
+    backGround: '#fb92ff',
 }, {
     index: 7,
     render: (<Load8 />),
-    backGround: '#ffaeae'
+    backGround: '#ffaeae',
 }, {
     index: 8,
     render: (<Load9 />),
-    backGround: '#ffd182'
+    backGround: '#ffd182',
 }, {
     index: 9,
     render: (<Load10 />),
-    backGround: '#ffff9f'
+    backGround: '#ffff9f',
 }, {
     index: 10,
     render: (<Load11 />),
-    backGround: '#9fff9f'
+    backGround: '#9fff9f',
 }, {
     index: 11,
     render: (<Load12 />),
-    backGround: '#fee5ff'
+    backGround: '#fee5ff',
 }]
 
 const Load = () => (
     <div className="loading">
         {
             loadComponents.map(item => (
-                <div key={item.index} className="loading-item" style={{ background: item.backGround }}>
+                <div
+                    key={item.index}
+                    className="loading-item"
+                    style={{ background: item.backGround }}
+                    onClick={() => { window.open(`${github}${item.index + 1}`) }}
+                >
                     {item.render}
                 </div>
             ))
