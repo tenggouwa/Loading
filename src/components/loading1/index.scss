@@ -1,0 +1,63 @@
+.loadable-loading {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  >div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+  .round {
+    display: block;
+    width: 15px;
+    height: 15px;
+    animation: roundAni 3s cubic-bezier(.5, 0, .5, 1) infinite;
+    border-radius: 100%;
+    background: #3d79ec;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: translateX(-100px)
+  }
+  .round-2 {
+    opacity: .9;
+    animation-delay: 90ms
+  }
+  .round-3 {
+    opacity: .8;
+    animation-delay: 180ms
+  }
+  .round-4 {
+    opacity: .7;
+    animation-delay: 270ms
+  }
+  .round-5 {
+    opacity: .6;
+    animation-delay: 360ms
+  }
+  .round-6 {
+    opacity: .5;
+    animation-delay: 450ms
+  }
+  @keyframes roundAni {
+    0% {
+        transform: translateX(-100px)
+    }
+    15% {
+        transform: translateX(-100px)
+    }
+    50% {
+        transform: translateX(100px)
+    }
+    65% {
+        transform: translateX(100px)
+    }
+    100% {
+        transform: translateX(-100px)
+    }
+  }
+}

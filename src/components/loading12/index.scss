@@ -1,0 +1,60 @@
+.loadable-loading {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  .loading12 {
+    width: 50px;
+    height: 50px;
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+  }
+  .loading12:before,
+  .loading12:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      animation: 1s loader12 linear infinite;
+  }
+  .loading12:before {
+      transform: rotateX(70deg);
+  }
+  .loading12:after {
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+  }
+  @keyframes loader12 {
+    0%, 100% {
+        box-shadow: 10px 0px 0 0px #3d79ec;
+    }
+    12% {
+        box-shadow: 10px 10px 0 0 #3d79ec;
+    }
+    25% {
+        box-shadow: 0 10px 0 0px #3d79ec;
+    }
+    37% {
+        box-shadow: -10px 10px 0 0 #3d79ec;
+    }
+    50% {
+        box-shadow: -10px 0 0 0 #3d79ec;
+    }
+    62% {
+        box-shadow: -10px -10px 0 0 #3d79ec;
+    }
+    75% {
+        box-shadow: 0px -10px 0 0 #3d79ec;
+    }
+    87% {
+        box-shadow: 10px -10px 0 0 #3d79ec;
+    }
+}
+}

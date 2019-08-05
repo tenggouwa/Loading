@@ -1,0 +1,57 @@
+.loadable-loading {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-width: 200px;
+  min-height: 200px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  >div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+  }
+}
+.spinner {
+  margin: 0 auto;
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 10px;
+  div {
+    background-color: #3d79ec;
+    height: 100%;
+    width: 4px;
+    border-radius: 3px;
+    margin-right: 5px;
+    display: inline-block;
+    animation: stretchdelay 1.2s infinite ease-in-out;
+  }
+  .rect2 {
+    animation-delay: -1.1s;
+  }
+  
+  .rect3 {
+    animation-delay: -1.0s;
+  }
+  
+  .rect4 {
+    animation-delay: -0.9s;
+  }
+  
+  .rect5 {
+    animation-delay: -0.8s;
+  }
+
+  @keyframes stretchdelay {
+    0%, 40%, 100% {
+      transform: scaleY(0.4);
+      -webkit-transform: scaleY(0.4);
+    }  20% {
+      transform: scaleY(1.0);
+      -webkit-transform: scaleY(1.0);
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.loadable-loading {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  .loading8 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .loading8:before,
+  .loading8:after {
+    content: '';
+    border: 5px solid #3d79ec;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader8 1s linear infinite;
+    opacity: 0;
+  }
+  .loading8:before {
+    animation-delay: 1s;
+  }
+  .loading8:after {
+    animation-delay: .5s;
+  }
+  @keyframes loader8 {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+}
